@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CV Styling with JavaScript</title> 
+</head> 
+<body> 
+    <button id="showCVBtn">Show Styled CV</button> 
+    <div id="cv" style="display: none;"> 
+        <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile 
+Picture"> 
+        <h1>John Doe</h1> 
+        <p id="about">I am a passionate web developer with expertise in creating 
+responsive and dynamic websites.</p> 
+        <div id="experience"> 
+            <h2>Experience</h2> 
+            <ul> 
+                <li>Frontend Developer at XYZ Corp (2020-2023)</li> 
+                <li>Intern at ABC Inc. (2019-2020)</li> 
+            </ul> 
+        </div> 
+        <div id="education"> 
+            <h2>Education</h2> 
+            <ul> 
+                <li>Bachelor of Science in Computer Science - University of 
+Example (2016-2020)</li> 
+            </ul> 
+        </div> 
+        <div id="contact"> 
+            <h2>Contact</h2> 
+            <p>Email: john.doe@example.com</p> 
+            <p>Phone: 123-456-7890</p> 
+        </div> 
+    </div> 
+ 
+    <script> 
+        document.getElementById("showCVBtn").addEventListener("click", function 
+() { 
+            // Select the CV element 
+            const cv = document.getElementById("cv"); 
+ 
+            // Apply styles using JavaScript 
+            cv.style.display = "block"; 
+            cv.style.width = "400px"; 
+            cv.style.margin = "20px auto"; 
+            cv.style.padding = "20px"; 
+            cv.style.border = "2px solid black"; 
+            cv.style.borderRadius = "10px"; 
+            cv.style.backgroundColor = "lightgray"; 
+            cv.style.fontFamily = "Arial, sans-serif"; 
+            cv.style.color = "#333"; 
+ 
+            // Style the profile image 
+            const profileImage = document.getElementById("profileImage"); 
+            profileImage.style.display = "block"; 
+            profileImage.style.width = "150px"; 
+            profileImage.style.height = "150px"; 
+            profileImage.style.borderRadius = "50%"; 
+            profileImage.style.margin = "0 auto 20px"; 
+ 
+            // Style the heading 
+            const heading = cv.querySelector("h1"); 
+            heading.style.textAlign = "center"; 
+            heading.style.color = "blue"; 
+ 
+            // Style the about statement 
+            const about = document.getElementById("about"); 
+            about.style.textAlign = "center"; 
+            about.style.fontStyle = "italic"; 
+            about.style.marginBottom = "20px"; 
+ 
+            // Style sections 
+            const sections = cv.querySelectorAll("div"); 
+            sections.forEach((section) => { 
+                section.style.marginBottom = "20px"; 
+            }); 
+ 
+            // Style section headings 
+            const sectionHeadings = cv.querySelectorAll("h2"); 
+            sectionHeadings.forEach((h2) => { 
+                h2.style.fontSize = "18px"; 
+                h2.style.marginBottom = "10px"; 
+                h2.style.borderBottom = "1px solid #ccc"; 
+                h2.style.paddingBottom = "5px"; 
+            }); 
+ 
+            // Style lists 
+            const lists = cv.querySelectorAll("ul"); 
+            lists.forEach((list) => { 
+                list.style.paddingLeft = "20px"; 
+            }); 
+ 
+            // Style paragraphs 
+            const paragraphs = cv.querySelectorAll("p"); 
+            paragraphs.forEach((p) => { 
+                p.style.margin = "5px 0"; 
+            }); 
+        }); 
+    </script> 
+</body> 
+</html> 

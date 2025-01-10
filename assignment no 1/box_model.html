@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Nested Box Model</title> 
+    <style> 
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-color: #f0f0f0; /* Light gray background */ 
+        } 
+ 
+        .outer-box { 
+            width: 400px; 
+            height: 300px; 
+            background-color: lightgreen; /* Green for outer box */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border: 5px solid darkgreen; /* Border for clarity */ 
+        } 
+ 
+        .middle-box { 
+            width: 300px; 
+            height: 200px; 
+            background-color: lightblue; /* Blue for middle box */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border: 5px solid darkblue; /* Border for clarity */ 
+        } 
+ 
+        .inner-box { 
+            width: 200px; 
+            height: 100px; 
+            background-color: lightcoral; /* Coral for inner box */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border: 5px solid darkred; /* Border for clarity */ 
+        } 
+ 
+        .box-label { 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: white; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="outer-box"> 
+        <div class="middle-box"> 
+            <div class="inner-box"> 
+                <span class="box-label">Innermost Div</span> 
+            </div> 
+        </div> 
+    </div> 
+</body> 
+</html> 
